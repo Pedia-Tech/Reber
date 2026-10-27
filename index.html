@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[COMPANY NAME] | Professional Rebar Detailing, BBS & Structural Reinforcement Engineering</title>
+  <meta name="description" content="Precision rebar detailing, reinforcement shop drawings, bar bending schedules (BBS), and 3D BIM rebar modeling for commercial, infrastructure, and high-rise structures.">
+  
+  <!-- Google Fonts: Space Grotesk (Engineering Display), Inter (Modern Body), JetBrains Mono (Technical Spec/CAD) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js & GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Blueprint Engineering Grid Canvas Overlay Background -->
+  <div class="blueprint-grid-bg" aria-hidden="true"></div>
+
+  <!-- Technical HUD Status Bar -->
+  <div class="top-technical-hud">
+    <div class="container">
+      <div class="hud-item">
+        <span class="hud-dot"></span>
+        <span>SPEC ENGINE: REBARCAD / TEKLA / REVIT LOD 400</span>
+      </div>
+      <div class="hud-item">
+        <span>STANDARDS COMPLIANT: ACI 318-19 • BS 8666 • EUROCODE 2 • CRSI</span>
+      </div>
+      <div class="hud-item">
+        <span>DRAWING TOLERANCE: ±1.5MM • CLASH-FREE CERTIFIED</span>
+      </div>
+      <div class="hud-item">
+        <span>DIRECT ENG DESK: <strong style="color:var(--brand-navy);">[PHONE]</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="header-wrapper">
+    <div class="container">
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo" aria-label="Home">
+          <div class="logo-symbol">
+            <!-- Architectural Rebar Tie / Hook Icon -->
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square">
+              <path d="M6 26V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v18" />
+              <path d="M10 12h12M10 17h12M10 22h12" stroke-dasharray="2 2" />
+              <circle cx="6" cy="26" r="2" fill="currentColor"/>
+              <circle cx="26" cy="26" r="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="brand-name">
+            <span class="logo-title">[COMPANY NAME]</span>
+            <span class="logo-tagline">Structural Reinforcement Detailing</span>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="industries.html" class="nav-link">Industries</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="process.html" class="nav-link">Our Process</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="contact.html" class="btn btn-primary">
+            <span>Request a Quote</span>
+            <span class="btn-arrow">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </a>
+          <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH 3D REALISTIC REBAR STRUCTURAL MODEL
+       ========================================================================== -->
+  <section class="hero-section" aria-label="Hero Section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Text & Headline Content -->
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pill-accent">BIM LOD 400</span>
+            <span>|</span>
+            <span>FABRICATION-READY ACCURACY</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Precision Behind <br>
+            <span class="highlight-word">Every Structure.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Professional rebar detailing, reinforcement drawings, BBS and quantity estimation designed for accurate fabrication and efficient construction.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="contact.html" class="btn btn-primary">
+              <span>Request a Quote</span>
+              <span class="btn-arrow">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 8h10M9 4l4 4-4 4"/>
+                </svg>
+              </span>
+            </a>
+            <a href="services.html" class="btn btn-secondary">Explore Services</a>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="hero-badges-row">
+            <div class="hero-metric">
+              <span class="metric-number">0%</span>
+              <span class="metric-label">Site Clash Rate</span>
+            </div>
+            <div class="hero-metric">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Bar Traceability</span>
+            </div>
+            <div class="hero-metric">
+              <span class="metric-number">48HR</span>
+              <span class="metric-label">Rapid RFI Resolution</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Realistic Rebar Structural Model Container -->
+        <div class="hero-visualizer-container" id="hero-model-container">
+          <!-- 3D WebGL Canvas Injection -->
+          <div id="hero-rebar-canvas" class="canvas-3d-wrapper"></div>
+
+          <!-- Subtle Engineering Annotations Around 3D Model -->
+          <div class="tech-annotation tag-1">Ø16 MAIN BARS</div>
+          <div class="tech-annotation tag-2">@150 C/C STIRRUPS</div>
+          <div class="tech-annotation tag-3">B-204 TIE SCHEME</div>
+          <div class="tech-annotation tag-4">L=4850 CUT LENGTH</div>
+          <div class="tech-annotation tag-5">TYPICAL SECTION A-A</div>
+
+          <!-- Dimension Baseline Indicator -->
+          <div class="dimension-line-horiz">
+            <span class="dimension-label">SPAN: 6,400mm [±1.5mm]</span>
+          </div>
+
+          <!-- 3D Viewport HUD Control Pills -->
+          <div class="model-controls-bar">
+            <div class="control-btn-group">
+              <button class="control-pill-btn active" id="btn-hero-rotate">Auto-Rotate: ON</button>
+              <button class="control-pill-btn" id="btn-hero-concrete">Concrete: Ghost</button>
+              <button class="control-pill-btn" id="btn-hero-reset">Reset View</button>
+            </div>
+            <div class="model-info-tip">
+              Drag to Orbit • Scroll to Zoom
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ENGINEERING TICKER STRIP
+       ========================================================================== -->
+  <section class="engineering-ticker-strip">
+    <div class="container">
+      <div class="ticker-grid">
+        <div class="ticker-card">
+          <div class="ticker-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="ticker-text">
+            <h4>BBS Automated Extraction</h4>
+            <p>Error-free schedules formatted for direct shearing & bending machine feeding.</p>
+          </div>
+        </div>
+
+        <div class="ticker-card">
+          <div class="ticker-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div class="ticker-text">
+            <h4>Tekla & Revit BIM LOD 400</h4>
+            <p>Every rebar, hook, spacer chair, and coupler modeled in accurate 3D geometry.</p>
+          </div>
+        </div>
+
+        <div class="ticker-card">
+          <div class="ticker-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+              <polyline points="2 17 12 22 22 17"/>
+              <polyline points="2 12 12 17 22 12"/>
+            </svg>
+          </div>
+          <div class="ticker-text">
+            <h4>Clash & Congestion Audits</h4>
+            <p>Resolves dense multi-layer beam-column joints prior to jobsite steel placement.</p>
+          </div>
+        </div>
+
+        <div class="ticker-card">
+          <div class="ticker-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 14 14"/>
+            </svg>
+          </div>
+          <div class="ticker-text">
+            <h4>Material Waste Minimization</h4>
+            <p>Optimized bar lap lengths and stock cutting schedules reduce scrap below 1.8%.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CINEMATIC PROGRESSIVE 3D ASSEMBLY SECTION (SCROLL & SCRUBBER CONTROLLED)
+       ========================================================================== -->
+  <section class="section-padding assembly-section" id="assembly-interactive-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 01</span> SEQUENTIAL REINFORCEMENT LOGIC
+        </div>
+        <h2 class="section-title">
+          From Structural Grid to Assembled Steel Model
+        </h2>
+        <p class="section-subtitle">
+          Observe how our detailers construct a fully coordinated reinforcement assembly step-by-step. Every bar adheres to cover clearances, seismic hooks, and lap splices.
+        </p>
+      </div>
+
+      <div class="assembly-layout">
+        <!-- Interactive Step List -->
+        <div class="assembly-steps-panel">
+          <div class="assembly-step-nav" id="assembly-step-tabs">
+            
+            <div class="assembly-step-item active" data-step="0">
+              <span class="step-num">01</span>
+              <div class="step-meta">
+                <h4>Structural Frame & Grid Lines</h4>
+                <p>Grid datum alignments, centerlines, concrete member envelopes, and boundary clearance limits.</p>
+                <div class="step-specs">
+                  <span>DATUM: A-B / 1-2</span>
+                  <span>COVER: 50mm NOM</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="1">
+              <span class="step-num">02</span>
+              <div class="step-meta">
+                <h4>Foundation Reinforcement</h4>
+                <p>Isolated & raft footings, bottom mat orthogonal rebars with 90° anchorage hooks, and starter dowels.</p>
+                <div class="step-specs">
+                  <span>MAT: Ø20 @ 150</span>
+                  <span>HOOK: 12d_b</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="2">
+              <span class="step-num">03</span>
+              <div class="step-meta">
+                <h4>Column Reinforcement</h4>
+                <p>Longitudinal main steel with certified stagger lap splices and rectangular perimeter seismic ties.</p>
+                <div class="step-specs">
+                  <span>MAIN: 8x Ø25</span>
+                  <span>TIES: Ø10 @ 100/150</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="3">
+              <span class="step-num">04</span>
+              <div class="step-meta">
+                <h4>Beam & Girder Detailing</h4>
+                <p>Top negative moment steel, bottom continuous tension bars, side face reinforcement, and closed shear stirrups.</p>
+                <div class="step-specs">
+                  <span>GIRDER: Ø25 + Ø20</span>
+                  <span>LINKS: 2-LEG Ø10</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="4">
+              <span class="step-num">05</span>
+              <div class="step-meta">
+                <h4>Slab Reinforcement</h4>
+                <p>Two-way bottom mesh reinforcement, top negative rebar across beam lines, trim bars, and rebar chair supports.</p>
+                <div class="step-specs">
+                  <span>SLAB: Ø12 @ 200 B/W</span>
+                  <span>CHAIRS: 1.0m C/C</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="5">
+              <span class="step-num">06</span>
+              <div class="step-meta">
+                <h4>Technical Dimensions & BBS Marks</h4>
+                <p>Bar mark callouts, cut lengths, standard bending shape codes, lap offsets, and detail section cuts.</p>
+                <div class="step-specs">
+                  <span>MARKS: 101 TO 408</span>
+                  <span>BS 8666 / ACI</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="assembly-step-item" data-step="6">
+              <span class="step-num">07</span>
+              <div class="step-meta">
+                <h4>Complete LOD 400 Rebar Model</h4>
+                <p>Integrated reinforcement cage ready for steel shearing, automated CNC bending, and site placement.</p>
+                <div class="step-specs">
+                  <span>STATUS: FABRICATION-READY</span>
+                  <span>CLASHES: ZERO</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3D Assembly Interactive Stage View -->
+        <div class="assembly-viewer-stage">
+          <div class="assembly-hud-overlay">
+            <div class="assembly-badge" id="assembly-stage-name">
+              STAGE 1/7: STRUCTURAL GRID & DATUM FRAMES
+            </div>
+            <div class="assembly-badge" style="color:var(--brand-blue);">
+              INTERACTIVE 3D STAGE
+            </div>
+          </div>
+
+          <div id="assembly-canvas-wrapper" class="assembly-canvas-container"></div>
+
+          <!-- Bottom Stage Scrubber -->
+          <div class="assembly-scrubber-controls">
+            <span class="scrubber-label">STAGE SCRUBBER:</span>
+            <input type="range" min="0" max="6" value="0" step="1" id="assembly-scrubber" class="scrubber-slider" aria-label="Assembly Stage Scrubber">
+            <span class="scrubber-label" id="scrubber-stage-val">STEP 1 OF 7</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DETAIL BEHIND THE STRUCTURE: BAR BENDING SCHEDULE (BBS) SECTION
+       ========================================================================== -->
+  <section class="section-padding bbs-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 02</span> BAR BENDING SCHEDULE (BBS)
+        </div>
+        <h2 class="section-title">
+          Detail Behind the Structure
+        </h2>
+        <p class="section-subtitle">
+          A preview of our automated schedule deliverables. Each bar mark contains exact cut lengths, standard shape codes, individual bend dimensions, and exact tonnage calculations.
+        </p>
+      </div>
+
+      <!-- BBS Table Card -->
+      <div class="bbs-table-wrapper">
+        <div class="bbs-toolbar">
+          <div class="bbs-status-indicators">
+            <div>SCHEDULE REF: <strong>BBS-PRJ-204-REV02</strong></div>
+            <div>CODE: <strong>BS 8666:2020 / ACI 318</strong></div>
+            <div>STEEL GRADE: <strong>B500B / GR 60</strong></div>
+          </div>
+          <div class="control-btn-group">
+            <button class="control-pill-btn active bbs-filter-btn" data-filter="all">All Members</button>
+            <button class="control-pill-btn bbs-filter-btn" data-filter="footing">Footing</button>
+            <button class="control-pill-btn bbs-filter-btn" data-filter="column">Column</button>
+            <button class="control-pill-btn bbs-filter-btn" data-filter="beam">Beam</button>
+            <button class="control-pill-btn bbs-filter-btn" data-filter="slab">Slab</button>
+          </div>
+        </div>
+
+        <table class="bbs-table" aria-label="Bar Bending Schedule Table">
+          <thead>
+            <tr>
+              <th>Bar Mark</th>
+              <th>Member</th>
+              <th>Diameter</th>
+              <th>Shape Code</th>
+              <th>Bend Geometry Profile</th>
+              <th>Length (mm)</th>
+              <th>Spacing</th>
+              <th>No. Bars</th>
+              <th>Unit Mass (kg/m)</th>
+              <th>Total Mass (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Footing Bottom Mesh -->
+            <tr data-category="footing" data-weight="493.2">
+              <td class="bar-mark-cell">F-01</td>
+              <td>Footing Mat X</td>
+              <td>Ø20</td>
+              <td>Code 21</td>
+              <td>
+                <!-- Shape Profile SVG: U-Bar with hooks -->
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <path d="M 10 20 L 10 6 L 90 6 L 90 20" />
+                  <text x="50" y="22" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">L=4,200</text>
+                </svg>
+              </td>
+              <td>4,200</td>
+              <td>@150 C/C</td>
+              <td>48</td>
+              <td>2.466</td>
+              <td class="weight-cell">497.1</td>
+            </tr>
+
+            <!-- Footing Starter Dowels -->
+            <tr data-category="footing" data-weight="152.0">
+              <td class="bar-mark-cell">F-02</td>
+              <td>Col Starter L</td>
+              <td>Ø25</td>
+              <td>Code 11</td>
+              <td>
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <path d="M 20 6 L 80 6 L 80 22" />
+                  <text x="50" y="20" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">L=2,600</text>
+                </svg>
+              </td>
+              <td>2,600</td>
+              <td>8/Col</td>
+              <td>16</td>
+              <td>3.853</td>
+              <td class="weight-cell">160.3</td>
+            </tr>
+
+            <!-- Column Main Longitudinal Bars -->
+            <tr data-category="column" data-weight="647.3">
+              <td class="bar-mark-cell">C-101</td>
+              <td>Column Main</td>
+              <td>Ø25</td>
+              <td>Code 00</td>
+              <td>
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <line x1="8" y1="14" x2="92" y2="14" />
+                  <text x="50" y="24" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">Straight L=10,500</text>
+                </svg>
+              </td>
+              <td>10,500</td>
+              <td>8 per Bay</td>
+              <td>16</td>
+              <td>3.853</td>
+              <td class="weight-cell">647.3</td>
+            </tr>
+
+            <!-- Column Ties / Stirrups -->
+            <tr data-category="column" data-weight="148.0">
+              <td class="bar-mark-cell">C-102</td>
+              <td>Col Stirrups</td>
+              <td>Ø10</td>
+              <td>Code 51</td>
+              <td>
+                <!-- Rectangular tie with 135 deg seismic hook -->
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <rect x="25" y="4" width="50" height="20" rx="1" />
+                  <path d="M 25 4 L 32 11 M 75 4 L 68 11" />
+                  <text x="50" y="16" font-size="6" fill="#64748b" text-anchor="middle" font-family="monospace">500x500</text>
+                </svg>
+              </td>
+              <td>2,350</td>
+              <td>@100 / @150</td>
+              <td>102</td>
+              <td>0.617</td>
+              <td class="weight-cell">147.9</td>
+            </tr>
+
+            <!-- Beam Main Tension Bars -->
+            <tr data-category="beam" data-weight="384.5">
+              <td class="bar-mark-cell">B-201</td>
+              <td>Girder Tension</td>
+              <td>Ø20</td>
+              <td>Code 21</td>
+              <td>
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <path d="M 12 8 L 12 18 L 88 18 L 88 8" />
+                  <text x="50" y="15" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">L=6,450</text>
+                </svg>
+              </td>
+              <td>6,450</td>
+              <td>4/Beam</td>
+              <td>24</td>
+              <td>2.466</td>
+              <td class="weight-cell">381.7</td>
+            </tr>
+
+            <!-- Beam Shear Links -->
+            <tr data-category="beam" data-weight="112.4">
+              <td class="bar-mark-cell">B-202</td>
+              <td>Shear Links</td>
+              <td>Ø10</td>
+              <td>Code 61</td>
+              <td>
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <rect x="30" y="5" width="40" height="18" />
+                  <line x1="30" y1="5" x2="36" y2="12" />
+                  <text x="50" y="16" font-size="6" fill="#64748b" text-anchor="middle" font-family="monospace">Link 300x600</text>
+                </svg>
+              </td>
+              <td>1,980</td>
+              <td>@150 C/C</td>
+              <td>92</td>
+              <td>0.617</td>
+              <td class="weight-cell">112.4</td>
+            </tr>
+
+            <!-- Slab Top & Bottom Mesh -->
+            <tr data-category="slab" data-weight="528.0">
+              <td class="bar-mark-cell">S-301</td>
+              <td>Slab Bottom Mat</td>
+              <td>Ø12</td>
+              <td>Code 00</td>
+              <td>
+                <svg class="shape-diagram-svg" viewBox="0 0 100 28" fill="none" stroke="#0b57d0" stroke-width="2">
+                  <line x1="8" y1="14" x2="92" y2="14" />
+                  <text x="50" y="24" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">Straight L=7,200</text>
+                </svg>
+              </td>
+              <td>7,200</td>
+              <td>@200 B/W</td>
+              <td>82</td>
+              <td>0.888</td>
+              <td class="weight-cell">524.3</td>
+            </tr>
+
+            <!-- Summary Total Row -->
+            <tr class="bbs-summary-row">
+              <td colspan="7">TOTAL ACTIVE SCHEDULE MASS (METRIC TONNES)</td>
+              <td id="bbs-visible-count">7 Bar Marks</td>
+              <td>-</td>
+              <td id="bbs-total-weight" style="color:var(--brand-blue); font-size:1.05rem;">2,471.0 kg</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SERVICES SECTION (LARGE EDITORIAL NUMBERED SECTIONS - NO GENERIC CARDS)
+       ========================================================================== -->
+  <section class="section-padding services-editorial-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 03</span> SPECIALIZED CORE CAPABILITIES
+        </div>
+        <h2 class="section-title">
+          Engineering & Rebar Detailing Services
+        </h2>
+        <p class="section-subtitle">
+          We combine structural engineering knowledge with computerized rebar modeling to produce fabrication-ready placement drawings and schedules.
+        </p>
+      </div>
+
+      <div class="services-editorial-list">
+        
+        <!-- Service 01: Rebar Detailing & Placement Drawings -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">01</span>
+            <span class="service-code-tag">REF: DET-2D/3D</span>
+          </div>
+          <div class="service-content-col">
+            <h3>Rebar Detailing & Placement Drawings</h3>
+            <p>
+              Comprehensive, clear placement plans detailing every individual rebar location, lap lengths, splice zones, concrete covers, and bar chairs. Designed directly for ironworkers on site to install reinforcement rapidly with zero ambiguities.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Full 2D plan, elevation, and cross-sectional placement drawings</li>
+              <li>Color-coded layer structures and clear bar callout tags</li>
+              <li>Bar chair spacing, support stool details, and rebar accessory plans</li>
+              <li>Format deliverables in DWG, DXF, vector PDF, and plot files</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>SHOP DRAWING SETS</span>
+              </span>
+              <img src="assets/rebar-shop-drawings-site.jpg" alt="Rebar Detailing & Placement Shop Drawings on Site" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/rebar-shop-drawings-site.jpg" data-lightbox-title="Rebar Placement Drawings & BBS On-Site Review" data-lightbox-meta="Verified Shop Drawings • DWG / PDF Output • Zero Field RFIs">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <!-- Rebar Placement CAD Vector Mockup -->
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.5">
+                <rect x="10" y="10" width="220" height="100" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+                <line x1="20" y1="30" x2="220" y2="30" stroke="#1e3a5f" stroke-width="2"/>
+                <line x1="20" y1="50" x2="220" y2="50" stroke="#1e3a5f" stroke-width="2"/>
+                <line x1="20" y1="70" x2="220" y2="70" stroke="#1e3a5f" stroke-width="2"/>
+                <line x1="20" y1="90" x2="220" y2="90" stroke="#1e3a5f" stroke-width="2"/>
+                <line x1="50" y1="20" x2="50" y2="100" stroke="#0b57d0" stroke-dasharray="2 2"/>
+                <line x1="110" y1="20" x2="110" y2="100" stroke="#0b57d0" stroke-dasharray="2 2"/>
+                <line x1="170" y1="20" x2="170" y2="100" stroke="#0b57d0" stroke-dasharray="2 2"/>
+                <path d="M 50 110 L 110 110" stroke="#64748b"/>
+                <text x="80" y="117" font-size="8" fill="#64748b" text-anchor="middle" font-family="monospace">@150 C/C</text>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>OUTPUT: .DWG / .PDF</span>
+              <span>SCALE: 1:20 / 1:50</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 02: Bar Bending Schedules (BBS) -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">02</span>
+            <span class="service-code-tag">REF: BBS-AUTO</span>
+          </div>
+          <div class="service-content-col">
+            <h3>Bar Bending Schedules (BBS)</h3>
+            <p>
+              Highly structured, automated bar schedules directly generated from our CAD/BIM models. Minimizes site cutting waste through cut-length algorithms and complies strictly with international standard shape codes.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>BS 8666, ACI 318, IS 2502, and AS/NZS shape coding</li>
+              <li>Total steel tonnage categorized by rebar diameter and grade</li>
+              <li>Direct electronic export to automated rebar shearing & bending machines (BVBS format)</li>
+              <li>Individual element summaries and master project summaries</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>BBS & CNC BENDING</span>
+              </span>
+              <img src="assets/automated-rebar-fabrication.jpg" alt="Automated Rebar Bending and Fabrication Machinery" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/automated-rebar-fabrication.jpg" data-lightbox-title="Automated Rebar Bending Plant" data-lightbox-meta="BVBS Direct Machine Export • Computerized Shearing Schedules">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.2">
+                <rect x="15" y="15" width="210" height="90" stroke="#d5e1ee"/>
+                <line x1="15" y1="35" x2="225" y2="35" stroke="#0b57d0"/>
+                <line x1="70" y1="15" x2="70" y2="105" stroke="#d5e1ee"/>
+                <line x1="130" y1="15" x2="130" y2="105" stroke="#d5e1ee"/>
+                <line x1="180" y1="15" x2="180" y2="105" stroke="#d5e1ee"/>
+                <text x="42" y="28" font-size="8" fill="#0b1e36" font-family="monospace" text-anchor="middle">MARK</text>
+                <text x="100" y="28" font-size="8" fill="#0b1e36" font-family="monospace" text-anchor="middle">SHAPE</text>
+                <text x="155" y="28" font-size="8" fill="#0b1e36" font-family="monospace" text-anchor="middle">CUT (mm)</text>
+                <text x="202" y="28" font-size="8" fill="#0b1e36" font-family="monospace" text-anchor="middle">KG</text>
+                <path d="M 85 60 L 115 60 L 115 75" stroke="#0b57d0" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>FORMAT: BVBS / XLS / CSV</span>
+              <span>TOLERANCE: CLASS A</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 03: Foundation Rebar Detailing -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">03</span>
+            <span class="service-code-tag">REF: SUB-STRUCT</span>
+          </div>
+          <div class="service-content-col">
+            <h3>Foundation Rebar Detailing</h3>
+            <p>
+              Specialized reinforcement detailing for complex substructures, including thick raft slabs, pile caps, strip footings, crane bases, and grade beams. Incorporates multi-tier top/bottom steel, diagonal corner reinforcement, and starter dowel anchors.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Heavy raft mat foundations with multi-layer steel grids</li>
+              <li>Pile caps with 2-pile to 16-pile tension tie configurations</li>
+              <li>Retaining wall base keys and waterstop reinforcement details</li>
+              <li>Cast-in anchor bolt clash detection and sleeve clearance checks</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>FOUNDATION RAFT CAGE</span>
+              </span>
+              <img src="assets/rebar-foundation-cage.jpg" alt="Foundation Rebar Mat Cage" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/rebar-foundation-cage.jpg" data-lightbox-title="Massive Commercial Foundation Raft Rebar Cage" data-lightbox-meta="Heavy Substructure Detailing • Column Starter Dowels • Staggered Splices">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.5">
+                <rect x="25" y="65" width="190" height="40" stroke="#cbd5e1"/>
+                <line x1="35" y1="95" x2="205" y2="95" stroke="#1e3a5f" stroke-width="2"/>
+                <path d="M 35 75 L 35 95 M 205 75 L 205 95" stroke="#1e3a5f" stroke-width="2"/>
+                <!-- Column Dowels extending up -->
+                <path d="M 90 95 L 90 20 M 150 95 L 150 20" stroke="#0b57d0" stroke-width="2"/>
+                <path d="M 90 95 L 75 95 M 150 95 L 165 95" stroke="#0b57d0" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>FOUNDATIONS: RAFT / PILE / PAD</span>
+              <span>DOWEL COUPLER CHECK</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 04: Column, Beam & Slab Detailing -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">04</span>
+            <span class="service-code-tag">REF: SUP-STRUCT</span>
+          </div>
+          <div class="service-content-col">
+            <h3>Column, Beam & Slab Reinforcement</h3>
+            <p>
+              High-precision superstructure detailing addressing congested beam-column intersections, seismic link hoops, post-tensioned tendon blockouts, drop panels, and penetrations.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Special moment frame (SMF) seismic detailing per ACI 318 Chapter 18</li>
+              <li>Staggered mechanical rebar coupler schedules</li>
+              <li>Two-way flat slabs with punching shear stud rails and column capital links</li>
+              <li>Shear core walls and boundary element confinement hoops</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>SEISMIC FRAME TIES</span>
+              </span>
+              <img src="assets/rebar-column-beam.jpg" alt="Column and Beam Junction Rebar Cage" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/rebar-column-beam.jpg" data-lightbox-title="Column & Beam Reinforced Joint" data-lightbox-meta="Special Moment Frame • 135-deg Seismic Confinement Hoops • Mechanical Couplers">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.5">
+                <!-- Column vertical -->
+                <rect x="95" y="10" width="50" height="100" stroke="#cbd5e1" stroke-dasharray="2 2"/>
+                <!-- Beam Horizontal Intersecting -->
+                <rect x="15" y="40" width="210" height="40" stroke="#cbd5e1" stroke-dasharray="2 2"/>
+                <!-- Longitudinal beam bars through column -->
+                <line x1="20" y1="46" x2="220" y2="46" stroke="#0b57d0" stroke-width="2"/>
+                <line x1="20" y1="74" x2="220" y2="74" stroke="#0b57d0" stroke-width="2"/>
+                <!-- Column vertical bars -->
+                <line x1="102" y1="15" x2="102" y2="105" stroke="#1e3a5f" stroke-width="2"/>
+                <line x1="138" y1="15" x2="138" y2="105" stroke="#1e3a5f" stroke-width="2"/>
+                <!-- Confined zone ties -->
+                <line x1="97" y1="48" x2="143" y2="48" stroke="#0284c7" stroke-width="1.5"/>
+                <line x1="97" y1="60" x2="143" y2="60" stroke="#0284c7" stroke-width="1.5"/>
+                <line x1="97" y1="72" x2="143" y2="72" stroke="#0284c7" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>JOINT: CONFINEMENT LEVEL A</span>
+              <span>COUPLERS: INCLUDED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 05: Quantity Takeoff & Rebar Estimation -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">05</span>
+            <span class="service-code-tag">REF: QTO-EST</span>
+          </div>
+          <div class="service-content-col">
+            <h3>Quantity Takeoff & Rebar Estimation</h3>
+            <p>
+              Pre-bid and construction-phase material takeoffs providing contractors and fabricators with accurate tonnage forecasts. Eliminates contingency budgeting surprises through precise steel ratio calculations.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Detailed tonnage breakdown by bar diameter (Ø8 to Ø40 / #3 to #14)</li>
+              <li>Estimated scrap factors and optimization suggestions</li>
+              <li>Accessory takeoffs: chairs, couplers, tie wire, spacers</li>
+              <li>Bid-ready BOQ spreadsheets compatible with Procore and Excel</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>SLAB MESH & MATERIAL QTO</span>
+              </span>
+              <img src="assets/rebar-slab-mesh.jpg" alt="Two-Way Slab Rebar Mesh and Accessories" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/rebar-slab-mesh.jpg" data-lightbox-title="Quantity Takeoff: Slab Reinforcement Mesh & Chairs" data-lightbox-meta="Material Optimization • Tonnage Breakdown by Diameter • Wastage < 2%">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.2">
+                <rect x="20" y="20" width="200" height="80" stroke="#d5e1ee"/>
+                <rect x="35" y="70" width="25" height="25" fill="#0b57d0"/>
+                <rect x="75" y="55" width="25" height="40" fill="#0b57d0"/>
+                <rect x="115" y="40" width="25" height="55" fill="#0b57d0"/>
+                <rect x="155" y="30" width="25" height="65" fill="#0b57d0"/>
+                <text x="47" y="105" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">#4</text>
+                <text x="87" y="105" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">#6</text>
+                <text x="127" y="105" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">#8</text>
+                <text x="167" y="105" font-size="7" fill="#64748b" text-anchor="middle" font-family="monospace">#11</text>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>ACCURACY: ±1.0% OF BBS</span>
+              <span>PRE-BID & FINAL BOQ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 06: 3D Rebar Modeling (BIM LOD 400) & Revit Output -->
+        <div class="service-editorial-row">
+          <div class="service-num-col">
+            <span class="service-big-num">06</span>
+            <span class="service-code-tag">REF: BIM-LOD400</span>
+          </div>
+          <div class="service-content-col">
+            <h3>3D Rebar Modeling (BIM) & CAD / Revit Output</h3>
+            <p>
+              True 3D rebar geometry modeling using Tekla Structures and Autodesk Revit at Level of Development 400. Enables full clash coordination with MEP conduits, post-tensioning anchors, embed plates, and penetration sleeves.
+            </p>
+            <ul class="service-deliverables-list">
+              <li>Native Autodesk Revit (.RVT) and Tekla Structures 3D models</li>
+              <li>Open IFC 2x3 and IFC4 structural reinforcement export</li>
+              <li>Navisworks federated clash detection reports</li>
+              <li>CNC bender automation files directly integrated with fabricator plants</li>
+            </ul>
+          </div>
+          <div class="service-visual-col">
+            <div class="service-photo-banner">
+              <span class="service-photo-tag">
+                <span class="indicator-dot"></span>
+                <span>3D BIM LOD 400 MODEL</span>
+              </span>
+              <img src="assets/bim-rebar-model.jpg" alt="3D BIM Rebar Modeling Tekla & Revit" loading="lazy">
+              <button class="service-zoom-btn" data-lightbox-src="assets/bim-rebar-model.jpg" data-lightbox-title="3D BIM Rebar Modeling & Tekla / Revit Output" data-lightbox-meta="Level of Development 400 • Navisworks Clash Audit • IFC Export">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="service-cad-schematic">
+              <svg viewBox="0 0 240 120" fill="none" stroke="#0b57d0" stroke-width="1.5">
+                <!-- Isometric Cube Wireframe with Rebar Grid -->
+                <path d="M 120 20 L 190 50 L 120 80 L 50 50 Z" stroke="#1e3a5f"/>
+                <path d="M 50 50 L 50 95 L 120 115 L 120 80" stroke="#1e3a5f"/>
+                <path d="M 190 50 L 190 95 L 120 115" stroke="#1e3a5f"/>
+                <!-- Internal Rebar Lines in 3D -->
+                <line x1="70" y1="45" x2="140" y2="75" stroke="#0b57d0" stroke-width="2"/>
+                <line x1="100" y1="35" x2="170" y2="65" stroke="#0b57d0" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="service-spec-bar">
+              <span>BIM: REVIT / TEKLA</span>
+              <span>INTEROPERABILITY: IFC 4</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 3.5rem; text-align: center;">
+        <a href="services.html" class="btn btn-secondary">
+          <span>View All 11 Detailing Services & Technical Deliverables</span>
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       QUALITY CONTROL SECTION (THREE-TIER PROTOCOL)
+       ========================================================================== -->
+  <section class="section-padding qc-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 04</span> ZERO-CLASH AUDIT PROCEDURE
+        </div>
+        <h2 class="section-title">
+          Three-Tier Quality Control Protocol
+        </h2>
+        <p class="section-subtitle">
+          Every sheet of reinforcement drawings and every line of BBS undergoes strict peer verification before client submittal.
+        </p>
+      </div>
+
+      <div class="qc-three-tier-grid">
+        
+        <!-- Tier 1: Detailer Self-Audit -->
+        <div class="qc-tier-card">
+          <div class="qc-tier-level">Level 01 Check</div>
+          <h3 class="qc-tier-title">Detailer Check</h3>
+          <p class="qc-tier-desc">
+            The lead detailer verifies rebar modeling geometry against the structural design documents, checking covers, lap lengths, and bend radius allowances.
+          </p>
+          <ul class="qc-checklist">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Verify concrete clear covers against architectural finish specs</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Confirm bar diameters and spacing against Engineer of Record (EOR) plans</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Validate standard hook dimensions and pin diameters per standard code</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tier 2: Technical Review -->
+        <div class="qc-tier-card">
+          <div class="qc-tier-level">Level 02 Check</div>
+          <h3 class="qc-tier-title">Technical Review</h3>
+          <p class="qc-tier-desc">
+            A Senior Structural Rebar Specialist audits joint congestion, constructability, handling weights, and mechanical splice coupler layouts.
+          </p>
+          <ul class="qc-checklist">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Beam-column joint congestion simulation & vibrator clearance</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Cross-check with MEP penetrations, core drilling zones, and embeds</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Optimization check for stock lengths (12m/14m/18m or 40ft/60ft)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tier 3: Final QA/QC Audit -->
+        <div class="qc-tier-card">
+          <div class="qc-tier-level">Level 03 Check</div>
+          <h3 class="qc-tier-title">Final QA/QC</h3>
+          <p class="qc-tier-desc">
+            Independent Quality Assurance Manager completes a cross-referencing audit between the 2D placement drawings, 3D model, and BBS cut-lists.
+          </p>
+          <ul class="qc-checklist">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>100% mathematical reconciliation of BBS bar quantities vs drawing marks</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Sign-off stamped for direct fabrication & site release</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Transmittal package prepared with revision changelogs and RFI history</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Standards Compliance Section -->
+      <div class="standards-bar">
+        <div class="standards-header">
+          <div>
+            <h4 style="font-size:1.15rem; color:var(--brand-navy); margin-bottom:4px;">International Detailing Standards & Codes</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Our detailing procedures comply with all major national structural reinforcement specifications:</p>
+          </div>
+          <span class="mono-tag">CERTIFIED PRACTICE</span>
+        </div>
+        <div class="standards-grid">
+          <div class="standard-badge">
+            <div class="standard-code">ACI 318-19</div>
+            <div class="standard-desc">American Concrete Institute</div>
+          </div>
+          <div class="standard-badge">
+            <div class="standard-code">BS 8666</div>
+            <div class="standard-desc">British Detailing & BBS Code</div>
+          </div>
+          <div class="standard-badge">
+            <div class="standard-code">EN 1992-1-1</div>
+            <div class="standard-desc">Eurocode 2: Concrete Design</div>
+          </div>
+          <div class="standard-badge">
+            <div class="standard-code">CRSI MANUAL</div>
+            <div class="standard-desc">Concrete Reinforcing Steel Institute</div>
+          </div>
+          <div class="standard-badge">
+            <div class="standard-code">IS 1786 / 2502</div>
+            <div class="standard-desc">Bureau of Indian Standards</div>
+          </div>
+          <div class="standard-badge">
+            <div class="standard-code">AS/NZS 4671</div>
+            <div class="standard-desc">Standards Australia & New Zealand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7-STEP PROCESS SECTION
+       ========================================================================== -->
+  <section class="section-padding process-section" id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 05</span> WORKFLOW PROTOCOL
+        </div>
+        <h2 class="section-title">
+          The 7-Step Precision Detailing Process
+        </h2>
+        <p class="section-subtitle">
+          From initial structural drawing intake to shop-ready delivery, our structured pipeline guarantees clarity, speed, and strict revision tracking.
+        </p>
+      </div>
+
+      <div class="process-timeline-grid">
+        
+        <div class="process-step-card">
+          <div class="process-step-num">01</div>
+          <h4 class="process-step-title">Drawings Received</h4>
+          <p class="process-step-desc">
+            Intake of structural engineering plans, architectural layouts, design notes, and geotechnical criteria.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">02</div>
+          <h4 class="process-step-title">Technical Review</h4>
+          <p class="process-step-desc">
+            Early clash identification, dimension cross-checks, and logging of formal RFIs for engineer resolution.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">03</div>
+          <h4 class="process-step-title">Rebar Detailing</h4>
+          <p class="process-step-desc">
+            Production of complete 2D/3D reinforcement layout drawings with precise lap lengths and cover offsets.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">04</div>
+          <h4 class="process-step-title">BBS & Quantity</h4>
+          <p class="process-step-desc">
+            Automated bar bending schedule generation with weight calculations, cut lengths, and shape codes.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">05</div>
+          <h4 class="process-step-title">QA/QC Audit</h4>
+          <p class="process-step-desc">
+            Rigorous three-tier peer review against structural design documents, constructability, and codes.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">06</div>
+          <h4 class="process-step-title">Client Review</h4>
+          <p class="process-step-desc">
+            Submittal to the structural engineer & general contractor for approval, with prompt incorporation of markups.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">07</div>
+          <h4 class="process-step-title">Final Delivery</h4>
+          <p class="process-step-desc">
+            Issuing fabrication-ready DWG, vector PDF, BVBS bender files, and LOD 400 IFC models ready for steel placement.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INDUSTRIES SECTION
+       ========================================================================== -->
+  <section class="section-padding industries-section" id="industries">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 06</span> SECTOR EXPERTISE
+        </div>
+        <h2 class="section-title">
+          Structures Engineered with Precision
+        </h2>
+        <p class="section-subtitle">
+          Our detailing capabilities span every structural typology, from heavily congested supertall high-rises to complex infrastructure civil works.
+        </p>
+      </div>
+
+      <div class="industries-grid">
+        
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 01</div>
+          <h3 class="industry-title">Commercial</h3>
+          <p class="industry-desc">
+            Retail complexes, corporate headquarters, podiums, and mixed-use towers with post-tensioned slabs and transfer girders.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Long-span transfer beams and multi-level parking ramps</span>
+            <span>• Punching shear stud rails & embedded steel plates</span>
+          </div>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 02</div>
+          <h3 class="industry-title">Residential</h3>
+          <p class="industry-desc">
+            Multi-family developments, luxury villas, and podium apartment blocks optimized for rapid formwork cycling.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Standardized bar mark naming for repetitive floors</span>
+            <span>• Prefabricated rebar mesh & column cage assemblies</span>
+          </div>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 03</div>
+          <h3 class="industry-title">High-Rise</h3>
+          <p class="industry-desc">
+            Skyscrapers featuring high-strength reinforcement, heavily congested core shear walls, and outrigger trusses.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Mechanical coupler stagger schedules (Type 1 & 2)</span>
+            <span>• High-volume concrete pour sequence coordination</span>
+          </div>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 04</div>
+          <h3 class="industry-title">Industrial</h3>
+          <p class="industry-desc">
+            Manufacturing plants, heavy equipment foundations, refinery pipe racks, and vibration-resistant machinery pedestals.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Massive anchor bolt cage clash coordination</span>
+            <span>• Heavy top/bottom rebar grids with shear links</span>
+          </div>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 05</div>
+          <h3 class="industry-title">Infrastructure</h3>
+          <p class="industry-desc">
+            Highway bridges, viaducts, box culverts, rail tunnels, pier caps, and retaining wing walls.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Curved rebar geometry and flared pier cap reinforcement</span>
+            <span>• Strict adherence to AASHTO, FHWA, and BS 5400 codes</span>
+          </div>
+        </div>
+
+        <div class="industry-card">
+          <div class="industry-tag">SECTOR // 06</div>
+          <h3 class="industry-title">Institutional</h3>
+          <p class="industry-desc">
+            Hospitals, universities, aviation terminals, and civic facilities with strict seismic and blast-resistance criteria.
+          </p>
+          <div class="industry-specs-list">
+            <span>• Special Moment Resisting Frame (SMRF) detailing</span>
+            <span>• Extensive MEP service penetration reinforcement</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECTS SHOWCASE SECTION
+       ========================================================================== -->
+  <section class="section-padding projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 07</span> DETAILED CASE STUDIES
+        </div>
+        <h2 class="section-title">
+          Selected Engineering Deliverables
+        </h2>
+        <p class="section-subtitle">
+          Explore recent structural reinforcement detailing projects delivered on schedule with zero site fabrication clashes.
+        </p>
+      </div>
+
+      <div class="projects-editorial-showcase">
+        
+        <!-- Project 1 -->
+        <div class="project-feature-item">
+          <div class="project-image-box">
+            <span class="project-tonnage-badge">8,450 METRIC TONNES</span>
+            <div class="project-image-toggle-bar">
+              <button class="proj-tab-btn active" data-mode="photo">Jobsite Photo</button>
+              <button class="proj-tab-btn" data-mode="cad">CAD Blueprint</button>
+            </div>
+            <!-- High-Res Jobsite Photo Toggle -->
+            <img src="assets/rebar-foundation-cage.jpg" alt="Foundation Rebar Mat Cage" class="project-real-photo" style="display:block; width:100%; height:100%; object-fit:cover;">
+            <button class="service-zoom-btn" style="position:absolute; bottom:12px; right:12px; z-index:3;" data-lightbox-src="assets/rebar-foundation-cage.jpg" data-lightbox-title="Metro Pinnacle Commercial Tower: Substructure Raft Mat" data-lightbox-meta="Heavy Multi-Tier Mats • 8,450 MT Tonnage • Zero Field Clashes">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Inspect Fullscreen</span>
+            </button>
+            <!-- Original High-Detail Architectural CAD Rebar Schematic SVG -->
+            <svg class="project-svg-schematic" viewBox="0 0 600 375" fill="none" style="display:none;">
+              <rect width="600" height="375" fill="#f0f5fa"/>
+              <!-- Background blueprint grid -->
+              <g stroke="#d5e1ee" stroke-width="1">
+                <line x1="0" y1="75" x2="600" y2="75"/>
+                <line x1="0" y1="150" x2="600" y2="150"/>
+                <line x1="0" y1="225" x2="600" y2="225"/>
+                <line x1="0" y1="300" x2="600" y2="300"/>
+                <line x1="120" y1="0" x2="120" y2="375"/>
+                <line x1="240" y1="0" x2="240" y2="375"/>
+                <line x1="360" y1="0" x2="360" y2="375"/>
+                <line x1="480" y1="0" x2="480" y2="375"/>
+              </g>
+              <!-- High-Rise Core Wall Elevation & Rebar Ties -->
+              <rect x="180" y="40" width="240" height="295" stroke="#0b1e36" stroke-width="2" fill="#ffffff" fill-opacity="0.8"/>
+              <!-- Rebar Columns in core -->
+              <g stroke="#0b57d0" stroke-width="2.5">
+                <line x1="200" y1="40" x2="200" y2="335"/>
+                <line x1="230" y1="40" x2="230" y2="335"/>
+                <line x1="260" y1="40" x2="260" y2="335"/>
+                <line x1="340" y1="40" x2="340" y2="335"/>
+                <line x1="370" y1="40" x2="370" y2="335"/>
+                <line x1="400" y1="40" x2="400" y2="335"/>
+              </g>
+              <!-- Horizontal ties -->
+              <g stroke="#0284c7" stroke-width="1.2" stroke-dasharray="3 2">
+                <line x1="180" y1="80" x2="420" y2="80"/>
+                <line x1="180" y1="120" x2="420" y2="120"/>
+                <line x1="180" y1="160" x2="420" y2="160"/>
+                <line x1="180" y1="200" x2="420" y2="200"/>
+                <line x1="180" y1="240" x2="420" y2="240"/>
+                <line x1="180" y1="280" x2="420" y2="280"/>
+              </g>
+              <!-- Technical Leader Dimensions -->
+              <path d="M 430 80 L 480 80 L 510 60" stroke="#0b57d0" stroke-width="1.5"/>
+              <text x="515" y="62" font-size="11" fill="#0b1e36" font-family="monospace" font-weight="bold">SEC CORE-W1</text>
+              <text x="515" y="78" font-size="9" fill="#0b57d0" font-family="monospace">Ø32 @ 125 STAGGER</text>
+            </svg>
+          </div>
+          <div class="project-info-box">
+            <span class="mono-tag">HIGH-RISE COMMERCIAL // 54 STORIES</span>
+            <h3 style="margin-top:0.75rem;">Metro Pinnacle Commercial Tower</h3>
+            <p>
+              Detailed full substructure raft foundation and 54-story superstructure, including central shear core walls and outrigger transfer girders. Implemented high-strength Ø32 and Ø40 bars with mechanical tension couplers.
+            </p>
+            <div class="project-stats-grid">
+              <div class="stat-item">
+                <span class="stat-val">8,450 MT</span>
+                <span class="stat-lbl">Rebar Tonnage</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">340+</span>
+                <span class="stat-lbl">Placement Sheets</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">100%</span>
+                <span class="stat-lbl">Clash-Free Deliveries</span>
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">
+              STANDARD: ACI 318-19 • SOFTWARE: TEKLA STRUCTURES LOD 400
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 (Reverse Layout) -->
+        <div class="project-feature-item reverse">
+          <div class="project-image-box">
+            <span class="project-tonnage-badge">12,200 METRIC TONNES</span>
+            <div class="project-image-toggle-bar">
+              <button class="proj-tab-btn active" data-mode="photo">Jobsite Photo</button>
+              <button class="proj-tab-btn" data-mode="cad">CAD Blueprint</button>
+            </div>
+            <!-- High-Res Viaduct Pier Cap Photo Toggle -->
+            <img src="assets/rebar-bridge-pier.jpg" alt="Highway Viaduct Pier Cap Rebar Cage" class="project-real-photo" style="display:block; width:100%; height:100%; object-fit:cover;">
+            <button class="service-zoom-btn" style="position:absolute; bottom:12px; right:12px; z-index:3;" data-lightbox-src="assets/rebar-bridge-pier.jpg" data-lightbox-title="Northern Highway Elevated Viaduct Pier Cap" data-lightbox-meta="BS 8666 / Eurocode 2 • 86 Cantilevered Pier Caps • 12,200 MT Reinforcement">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Inspect Fullscreen</span>
+            </button>
+            <svg class="project-svg-schematic" viewBox="0 0 600 375" fill="none" style="display:none;">
+              <rect width="600" height="375" fill="#f0f5fa"/>
+              <g stroke="#d5e1ee" stroke-width="1">
+                <line x1="0" y1="100" x2="600" y2="100"/>
+                <line x1="0" y1="200" x2="600" y2="200"/>
+                <line x1="0" y1="300" x2="600" y2="300"/>
+                <line x1="150" y1="0" x2="150" y2="375"/>
+                <line x1="300" y1="0" x2="300" y2="375"/>
+                <line x1="450" y1="0" x2="450" y2="375"/>
+              </g>
+              <!-- Bridge Pier Cap & Abutment Reinforcement Geometry -->
+              <path d="M 80 120 L 520 120 L 460 220 L 140 220 Z" stroke="#0b1e36" stroke-width="2.5" fill="#ffffff" fill-opacity="0.8"/>
+              <!-- Pier Shaft -->
+              <rect x="230" y="220" width="140" height="110" stroke="#0b1e36" stroke-width="2" fill="#ffffff" fill-opacity="0.8"/>
+              <!-- Internal Main Rebar Loops -->
+              <g stroke="#0b57d0" stroke-width="2">
+                <path d="M 100 135 L 500 135 M 110 150 L 490 150 M 120 165 L 480 165"/>
+                <line x1="250" y1="220" x2="250" y2="330"/>
+                <line x1="280" y1="220" x2="280" y2="330"/>
+                <line x1="320" y1="220" x2="320" y2="330"/>
+                <line x1="350" y1="220" x2="350" y2="330"/>
+              </g>
+              <!-- Links & Stirrups in Pier Cap -->
+              <g stroke="#0284c7" stroke-width="1.2">
+                <line x1="160" y1="130" x2="160" y2="210"/>
+                <line x1="200" y1="130" x2="200" y2="210"/>
+                <line x1="400" y1="130" x2="400" y2="210"/>
+                <line x1="440" y1="130" x2="440" y2="210"/>
+              </g>
+              <!-- Dimension Callout -->
+              <path d="M 460 220 L 520 260" stroke="#0b57d0" stroke-width="1.5"/>
+              <text x="490" y="280" font-size="11" fill="#0b1e36" font-family="monospace" font-weight="bold">PIER CAP PC-04</text>
+              <text x="490" y="295" font-size="9" fill="#0b57d0" font-family="monospace">POST-TENSION TENDON CLASH CHECKED</text>
+            </svg>
+          </div>
+          <div class="project-info-box">
+            <span class="mono-tag">INFRASTRUCTURE // HIGHWAY VIADUCT</span>
+            <h3 style="margin-top:0.75rem;">Northern Highway Elevated Viaduct</h3>
+            <p>
+              Complete rebar modeling and automated bar bending schedules for 4.2 km of elevated viaduct, including 86 pier caps, bored pile foundations, and prestressed box girders.
+            </p>
+            <div class="project-stats-grid">
+              <div class="stat-item">
+                <span class="stat-val">12,200 MT</span>
+                <span class="stat-lbl">Rebar Tonnage</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">580+</span>
+                <span class="stat-lbl">Shop Drawings</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">0</span>
+                <span class="stat-lbl">Jobsite Delays</span>
+              </div>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">
+              STANDARD: BS 8666 / EUROCODE 2 • SOFTWARE: AUTODESK REVIT & REBARCAD
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 3.5rem; text-align: center;">
+        <a href="projects.html" class="btn btn-secondary">
+          <span>Explore All Project Case Studies</span>
+          <span class="btn-arrow">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VISUAL DELIVERABLES VAULT (INTERACTIVE IMAGE GALLERY & LIGHTBOX)
+       ========================================================================== -->
+  <section class="section-padding visual-vault-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span>// 08</span> ENGINEERING IN PRACTICE
+        </div>
+        <h2 class="section-title">
+          Visual Deliverables Vault & Jobsite Gallery
+        </h2>
+        <p class="section-subtitle">
+          Explore photographic and 3D modeling records of our reinforcement detailing deployed on live jobsites, infrastructure viaducts, and automated steel bending yards.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="vault-filter-bar">
+        <button class="filter-tab vault-tab active" data-vault="all">All Deliverables</button>
+        <button class="filter-tab vault-tab" data-vault="bim">3D BIM Models</button>
+        <button class="filter-tab vault-tab" data-vault="foundations">Substructure Rafts</button>
+        <button class="filter-tab vault-tab" data-vault="infrastructure">Civil Infrastructure</button>
+        <button class="filter-tab vault-tab" data-vault="fabrication">CNC Fabrication</button>
+      </div>
+
+      <!-- Vault 4-Card Grid with Rich Real Imagery -->
+      <div class="vault-grid">
+        
+        <!-- Card 1: 3D BIM Model Workstation -->
+        <div class="vault-card" data-vault-cat="bim">
+          <div class="vault-img-box">
+            <span class="vault-badge-floating">
+              <span class="dot"></span>
+              <span>BIM LOD 400 • REVIT / TEKLA</span>
+            </span>
+            <img src="assets/bim-rebar-model.jpg" alt="3D BIM Rebar Modeling Engineering Workstation" loading="lazy">
+            <button class="vault-zoom-btn" data-lightbox-src="assets/bim-rebar-model.jpg" data-lightbox-title="3D BIM Rebar Modeling Engineering Workstation" data-lightbox-meta="Tekla Structures & Revit LOD 400 • Dual-Screen Clash Analysis">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+              <span>Inspect High-Res</span>
+            </button>
+          </div>
+          <div class="vault-card-content">
+            <div>
+              <h3 class="vault-card-title">Parametric 3D BIM Rebar Joint Modeling</h3>
+              <p class="vault-card-desc">
+                Engineering workstation displaying an intricate column-beam intersection model with color-coded rebar tiers, coupler staggering, and synchronized 2D shop drawings.
+              </p>
+            </div>
+            <div class="vault-spec-pills">
+              <span>SOFTWARE: TEKLA / REVIT</span>
+              <span>LOD: 400 FABRICATION</span>
+              <span>CLASH CHECK: NAVISWORKS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Foundation Rebar Cage -->
+        <div class="vault-card" data-vault-cat="foundations">
+          <div class="vault-img-box">
+            <span class="vault-badge-floating">
+              <span class="dot" style="background-color:#10b981;"></span>
+              <span>SUBSTRUCTURE • RAFT REINFORCEMENT</span>
+            </span>
+            <img src="assets/rebar-foundation-cage.jpg" alt="Massive Foundation Rebar Cage Construction" loading="lazy">
+            <button class="vault-zoom-btn" data-lightbox-src="assets/rebar-foundation-cage.jpg" data-lightbox-title="Massive Raft Foundation Rebar Mat" data-lightbox-meta="Grade 60 (B500B) • Multi-Layer Mat with Column Starter Dowels">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+              <span>Inspect High-Res</span>
+            </button>
+          </div>
+          <div class="vault-card-content">
+            <div>
+              <h3 class="vault-card-title">Heavy Commercial Raft Foundation Cage</h3>
+              <p class="vault-card-desc">
+                Multi-layer orthogonal rebar mat with vertical starter dowels for core shear walls. Detailed with precise chair supports to maintain top/bottom cover tolerances.
+              </p>
+            </div>
+            <div class="vault-spec-pills">
+              <span>MAT DEPTH: 2,400mm</span>
+              <span>MAIN BARS: Ø32 @ 150 C/C</span>
+              <span>STANDARD: ACI 318</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Highway Viaduct Pier Cap -->
+        <div class="vault-card" data-vault-cat="infrastructure">
+          <div class="vault-img-box">
+            <span class="vault-badge-floating">
+              <span class="dot" style="background-color:#f59e0b;"></span>
+              <span>CIVIL INFRASTRUCTURE • HIGHWAY VIADUCT</span>
+            </span>
+            <img src="assets/rebar-bridge-pier.jpg" alt="Viaduct Pier Cap Reinforcement Cage" loading="lazy">
+            <button class="vault-zoom-btn" data-lightbox-src="assets/rebar-bridge-pier.jpg" data-lightbox-title="Highway Viaduct Flared Pier Cap Reinforcement" data-lightbox-meta="BS 8666 / Eurocode 2 • Post-Tensioned Tendon Coordination">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+              <span>Inspect High-Res</span>
+            </button>
+          </div>
+          <div class="vault-card-content">
+            <div>
+              <h3 class="vault-card-title">Monumental Pier Cap Rebar Assembly</h3>
+              <p class="vault-card-desc">
+                Flared cantilevered bridge pier cap featuring heavily reinforced tension top steel, shear link containment, and internal ducts for post-tensioning tendons.
+              </p>
+            </div>
+            <div class="vault-spec-pills">
+              <span>TONNAGE: 142 MT PER CAP</span>
+              <span>BAR MARKS: BS 8666 CODE 21 & 51</span>
+              <span>CLASH CHECKED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Automated Rebar Fabrication Plant -->
+        <div class="vault-card" data-vault-cat="fabrication">
+          <div class="vault-img-box">
+            <span class="vault-badge-floating">
+              <span class="dot" style="background-color:#0b57d0;"></span>
+              <span>FABRICATION PLANT • CNC AUTOMATION</span>
+            </span>
+            <img src="assets/automated-rebar-fabrication.jpg" alt="Automated CNC Rebar Shearing and Bending Machine" loading="lazy">
+            <button class="vault-zoom-btn" data-lightbox-src="assets/automated-rebar-fabrication.jpg" data-lightbox-title="Automated Rebar CNC Bending & Fabrication Plant" data-lightbox-meta="BVBS Direct Machine Code • Zero Scrap Optimization">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+              </svg>
+              <span>Inspect High-Res</span>
+            </button>
+          </div>
+          <div class="vault-card-content">
+            <div>
+              <h3 class="vault-card-title">Automated CNC Bending Integration</h3>
+              <p class="vault-card-desc">
+                Direct transmission of electronic BBS schedules into high-speed CNC shearing and bending machines, ensuring identical bend angles matching shop drawing schedules.
+              </p>
+            </div>
+            <div class="vault-spec-pills">
+              <span>CODE: BVBS 2.0 EXPORT</span>
+              <span>TOLERANCE: ±2.0mm</span>
+              <span>SPEED: CNC DRIVEN</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BEFORE & AFTER COMPARISON SLIDER: DESIGN INTENT VS DETAILING REALITY
+       ========================================================================== -->
+  <section class="section-padding comparison-section">
+    <div class="container">
+      <div class="section-header" style="text-align:center; max-width:850px; margin-left:auto; margin-right:auto;">
+        <div class="section-label" style="justify-content:center;">
+          <span>// VALUE ENGINEERING</span> TRANSFORMATION SLIDER
+        </div>
+        <h2 class="section-title">
+          Design Intent vs. Fabrication-Ready Detailing
+        </h2>
+        <p class="section-subtitle" style="margin-left:auto; margin-right:auto;">
+          Drag the interactive slider below to witness how theoretical engineering lines transform into fully resolved, clash-free, fabrication-ready 3D reinforcement models.
+        </p>
+      </div>
+
+      <div class="before-after-wrapper">
+        <div class="before-after-container">
+          
+          <!-- Layer 1: Before (Design Drawing / Schematic) -->
+          <div class="compare-layer before">
+            <span class="compare-label lbl-before">STRUCTURAL DESIGN INTENT (RAW)</span>
+            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:#f8fafc; padding:2rem;">
+              <svg viewBox="0 0 600 340" fill="none" stroke="#64748b" stroke-width="1.5" style="max-width:85%; max-height:85%;">
+                <!-- Blueprint Schematic Outline -->
+                <rect x="50" y="40" width="500" height="260" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+                <line x1="120" y1="40" x2="120" y2="300" stroke="#94a3b8"/>
+                <line x1="480" y1="40" x2="480" y2="300" stroke="#94a3b8"/>
+                <!-- Basic uncoordinated rebar lines -->
+                <line x1="80" y1="100" x2="520" y2="100" stroke="#475569" stroke-width="2"/>
+                <line x1="80" y1="240" x2="520" y2="240" stroke="#475569" stroke-width="2"/>
+                <line x1="140" y1="60" x2="140" y2="280" stroke="#475569" stroke-width="2"/>
+                <line x1="460" y1="60" x2="460" y2="280" stroke="#475569" stroke-width="2"/>
+                <!-- Question Mark Callouts / Clashes -->
+                <circle cx="140" cy="100" r="16" fill="#fee2e2" stroke="#ef4444"/>
+                <text x="140" y="105" font-size="14" fill="#b91c1c" font-weight="bold" text-anchor="middle" font-family="sans-serif">?</text>
+                <text x="170" y="95" font-size="10" fill="#dc2626" font-family="monospace">CONGESTION CLASH</text>
+                <circle cx="460" cy="100" r="16" fill="#fee2e2" stroke="#ef4444"/>
+                <text x="460" y="105" font-size="14" fill="#b91c1c" font-weight="bold" text-anchor="middle" font-family="sans-serif">?</text>
+                <text x="350" y="95" font-size="10" fill="#dc2626" font-family="monospace">UNDEFINED LAP</text>
+                <text x="300" y="180" font-size="13" fill="#64748b" text-anchor="middle" font-family="monospace">SCHEMATIC ONLY • NOT READY FOR FABRICATION</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Layer 2: After (Detailed 3D BIM Rebar Model Photo) -->
+          <div class="compare-layer after">
+            <span class="compare-label lbl-after">FABRICATION-READY 3D REBAR (DETAILED)</span>
+            <div class="compare-inner-content">
+              <img src="assets/bim-rebar-model.jpg" alt="Detailed 3D Rebar BIM Model" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+          </div>
+
+          <!-- Draggable Slider Handle -->
+          <div class="slider-handle-bar">
+            <div class="handle-pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/><polyline points="9 18 3 12 9 6"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-tip-text">
+          ◄ DRAG SLIDER LEFT OR RIGHT TO REVEAL 3D BIM DETAILING ACCURACY ►
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ABOUT TEASER SECTION
+       ========================================================================== -->
+  <section class="section-padding about-teaser-section" id="about">
+    <div class="container">
+      <div class="about-teaser-grid">
+        <div class="about-quote-box">
+          <div class="about-quote-text">
+            "PRECISION IN EVERY BAR."
+          </div>
+          <p style="font-size:1.05rem; line-height:1.7; color:var(--text-secondary); margin-bottom:1.5rem;">
+            We operate as an extension of your structural engineering and fabrication team. By translating complex engineering intent into constructible, clash-free shop drawings, we eliminate jobsite re-work and save thousands of installation man-hours.
+          </p>
+          <div class="about-quote-author">
+            ENGINEERING LEADERSHIP // [COMPANY NAME]
+          </div>
+        </div>
+
+        <div>
+          <div class="section-label">
+            <span>// 08</span> ENGINEERING EXCELLENCE
+          </div>
+          <h2 class="section-title" style="font-size:2.4rem;">
+            Built on Rigorous Mathematical Verification
+          </h2>
+          <p style="margin-bottom:1.5rem;">
+            Whether handling fast-track precast concrete projects, post-tensioned floor systems, or deep foundations, our engineers bring decades of specialized rebar detailing knowledge to your project.
+          </p>
+          <ul class="qc-checklist" style="margin-bottom:2rem;">
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Experienced teams trained in American (ACI/CRSI), British (BS), and Eurocode standards</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Dedicated project coordinators providing continuous progress reporting</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              <span>Automated electronic data exchange (BVBS, DXF, IFC) directly to rebar factories</span>
+            </li>
+          </ul>
+          <a href="about.html" class="btn btn-outline-blue">Learn More About Our Firm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL FAQ SECTION
+       ========================================================================== -->
+  <section class="section-padding faq-section">
+    <div class="container">
+      <div class="section-header" style="text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
+        <div class="section-label" style="justify-content:center;">
+          <span>// 09</span> TECHNICAL INQUIRIES
+        </div>
+        <h2 class="section-title">
+          Frequently Answered Technical Questions
+        </h2>
+        <p class="section-subtitle">
+          Essential clarifications on deliverables, software ecosystems, turnarounds, and compliance.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>What international detailing standards and codes do you adhere to?</span>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our detailers are fully certified and proficient in ACI 318-19, ACI 315 (Details and Detailing of Concrete Reinforcement), CRSI Manual of Standard Practice, BS 8666:2020, Eurocode 2 (EN 1992-1-1), IS 1786/IS 2502, and AS/NZS 4671. We configure drawing borders, bar mark naming conventions, and bend shapes strictly to your regional standard.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Which software applications do you utilize for 2D & 3D rebar detailing?</span>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We operate an enterprise CAD/BIM environment including Tekla Structures (LOD 400), Autodesk Revit, RebarCAD, AutoCAD, and Navisworks Manage for clash analysis. We can deliver native RVT or Tekla models, open standard IFC files, and automated bender BVBS files for machine automation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do you handle structural RFIs (Requests For Information)?</span>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              During our initial Stage 02 Technical Review, any missing dimensions, unclear lap lengths, or joint rebar congestion issues are cataloged into a formal RFI log with proposed engineering solutions and sketch overlays. We ensure early resolution to prevent delays during detailing.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can you produce automated Bar Bending Schedules for CNC shearing & bending machines?</span>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes. Our BBS exports can be provided in standard formats including BVBS (format used by Schnell, MEP, Progress, and Pedax machines), as well as structured Excel, CSV, and PDF cut-lists.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is your typical turnaround time for a structural rebar submittal package?</span>
+            <div class="faq-toggle-icon">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Turnaround depends on project tonnage and structural complexity. Standard foundation and initial column packages are typically delivered within 5 to 7 business days, with rapid 48-hour turnarounds available for urgent project milestones.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PREMIUM CONTACT & PROJECT QUOTE SECTION
+       ========================================================================== -->
+  <section class="section-padding contact-section" id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        
+        <!-- Contact Information & Placeholders -->
+        <div class="contact-info-panel">
+          <div class="section-label">
+            <span>// 10</span> PROJECT ONBOARDING
+          </div>
+          <h2 class="section-title" style="font-size:2.4rem;">
+            Initiate Your Rebar Detailing Scope
+          </h2>
+          <p style="color:var(--text-secondary); line-height:1.7;">
+            Upload your structural drawings, specifications, and project timeline. Our engineering department will analyze your design criteria and provide a detailed quote and turnaround schedule within 24 business hours.
+          </p>
+
+          <div class="contact-placeholder-box">
+            <div class="placeholder-row">
+              <span class="placeholder-lbl">COMPANY ENTITY</span>
+              <span class="placeholder-val">[COMPANY NAME]</span>
+            </div>
+            <div class="placeholder-row">
+              <span class="placeholder-lbl">DIRECT ENGINEERING INQUIRIES</span>
+              <span class="placeholder-val">[EMAIL]</span>
+            </div>
+            <div class="placeholder-row">
+              <span class="placeholder-lbl">TELEPHONE / ESTIMATION DESK</span>
+              <span class="placeholder-val">[PHONE]</span>
+            </div>
+            <div class="placeholder-row">
+              <span class="placeholder-lbl">WHATSAPP / INSTANT REVIEW</span>
+              <span class="placeholder-val">[WHATSAPP]</span>
+            </div>
+            <div class="placeholder-row">
+              <span class="placeholder-lbl">HEADQUARTERS LOCATION</span>
+              <span class="placeholder-val">[LOCATION]</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Form Card -->
+        <div class="quote-form-card">
+          <h3 style="font-size:1.6rem; color:var(--brand-navy); margin-bottom:0.5rem;">Request a Project Quote</h3>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:2rem;">
+            Fill in the project details below to receive a comprehensive proposal.
+          </p>
+
+          <!-- Form Success Alert Banner (Initially Hidden) -->
+          <div id="form-success-alert" style="display:none; background:#ecfdf5; border:1px solid #10b981; color:#065f46; padding:1.25rem; margin-bottom:1.5rem; font-family:var(--font-mono); font-size:0.85rem;">
+            ✓ INQUIRY RECEIVED: Your drawing files and project scope have been logged. An engineering lead will contact you within 24 hours.
+          </div>
+
+          <form id="project-quote-form" action="#" method="POST">
+            <div class="form-grid">
+              
+              <div class="form-group">
+                <label class="form-label" for="quote-name">Full Name *</label>
+                <input class="form-input" type="text" id="quote-name" name="name" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-company">Company / Fabricator *</label>
+                <input class="form-input" type="text" id="quote-company" name="company" placeholder="e.g. Apex Steel Fabricators" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-email">Email Address *</label>
+                <input class="form-input" type="email" id="quote-email" name="email" placeholder="john@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-phone">Phone Number *</label>
+                <input class="form-input" type="tel" id="quote-phone" name="phone" placeholder="+1 (555) 019-2834" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-project-type">Project Type *</label>
+                <select class="form-select" id="quote-project-type" name="project_type" required>
+                  <option value="">Select Structure Type...</option>
+                  <option value="commercial">Commercial / Mixed-Use</option>
+                  <option value="high-rise">High-Rise Superstructure</option>
+                  <option value="infrastructure">Infrastructure & Bridges</option>
+                  <option value="industrial">Industrial & Heavy Plant</option>
+                  <option value="residential">Residential Development</option>
+                  <option value="institutional">Institutional / Healthcare</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="quote-service">Required Service *</label>
+                <select class="form-select" id="quote-service" name="service" required>
+                  <option value="">Select Service Scope...</option>
+                  <option value="rebar-detailing">Complete Rebar Detailing & Placement Drawings</option>
+                  <option value="bbs">Bar Bending Schedules (BBS) Only</option>
+                  <option value="bim-3d">3D Rebar Modeling (Tekla / Revit LOD 400)</option>
+                  <option value="takeoff">Quantity Takeoff & Rebar Estimation</option>
+                  <option value="full-scope">Full Package (Drawings + BBS + 3D Model)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="quote-location">Project Location / Regional Code</label>
+                <input class="form-input" type="text" id="quote-location" name="location" placeholder="e.g. Chicago, IL (ACI 318) or London, UK (BS 8666)">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="quote-desc">Project Description & Scope Details</label>
+                <textarea class="form-textarea" id="quote-desc" name="description" placeholder="Specify estimated tonnage, foundation types, key submittal milestones, or special coupler requirements..."></textarea>
+              </div>
+
+              <!-- Drag & Drop Upload Drawings Zone -->
+              <div class="form-group full-width">
+                <label class="form-label">
+                  <span>Upload Drawings (Architectural / Structural)</span>
+                  <span style="color:var(--brand-blue);">.PDF, .DWG, .DXF, .RVT, .ZIP (MAX 100MB)</span>
+                </label>
+                <div class="upload-dropzone" id="drawing-dropzone">
+                  <input type="file" id="drawing-file-input" multiple accept=".pdf,.dwg,.dxf,.rvt,.zip,.ifc">
+                  <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                  <div class="upload-title">Drag & drop structural drawing files here, or browse</div>
+                  <div class="upload-sub">Secure transfer to our engineering workstation. NDA protection guaranteed.</div>
+                  <div class="file-preview-list" id="file-preview-list"></div>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="quote-message">Additional Notes / RFIs</label>
+                <textarea class="form-textarea" id="quote-message" name="message" style="min-height:80px;" placeholder="Any specific requirements regarding bar bending shapes, standard hook angles, or sheet sizes..."></textarea>
+              </div>
+
+              <div class="form-group full-width" style="margin-top:0.5rem;">
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:1rem 2rem; font-size:1.05rem;">
+                  <span>Request a Project Quote</span>
+                  <span class="btn-arrow">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M3 8h10M9 4l4 4-4 4"/>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Footer Home">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square">
+                <path d="M6 26V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v18" />
+                <path d="M10 12h12M10 17h12M10 22h12" stroke-dasharray="2 2" />
+                <circle cx="6" cy="26" r="2" fill="currentColor"/>
+                <circle cx="26" cy="26" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="brand-name">
+              <span class="logo-title">[COMPANY NAME]</span>
+              <span class="logo-tagline">Structural Reinforcement Detailing</span>
+            </div>
+          </a>
+          <p>
+            International engineering firm specializing in fabrication-ready rebar detailing, computerized Bar Bending Schedules (BBS), and 3D BIM structural reinforcement modeling.
+          </p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:#90cdf4;">
+            CORE BRAND COMMITMENT:<br>
+            <strong style="color:#ffffff; letter-spacing:0.08em;">"PRECISION IN EVERY BAR."</strong>
+          </div>
+        </div>
+
+        <!-- Services Links -->
+        <div class="footer-col">
+          <h4>Detailing Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#rebar-detailing">Rebar Detailing</a></li>
+            <li><a href="services.html#bbs">Bar Bending Schedules (BBS)</a></li>
+            <li><a href="services.html#placement-drawings">Placement Drawings</a></li>
+            <li><a href="services.html#foundation">Foundation Detailing</a></li>
+            <li><a href="services.html#columns-beams">Column & Beam Reinforcement</a></li>
+            <li><a href="services.html#slabs">Slab Reinforcement</a></li>
+            <li><a href="services.html#takeoff">Quantity Takeoff & Estimation</a></li>
+            <li><a href="services.html#3d-modeling">3D Rebar BIM (LOD 400)</a></li>
+          </ul>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Our Firm</a></li>
+            <li><a href="services.html">All Services</a></li>
+            <li><a href="industries.html">Industries Served</a></li>
+            <li><a href="projects.html">Project Portfolio</a></li>
+            <li><a href="process.html">Our 7-Step Process</a></li>
+            <li><a href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Location Info -->
+        <div class="footer-col">
+          <h4>Engineering Desk</h4>
+          <ul class="footer-contact-items">
+            <li>
+              <span>Company Entity</span>
+              <strong>[COMPANY NAME]</strong>
+            </li>
+            <li>
+              <span>Email Submittals</span>
+              <strong>[EMAIL]</strong>
+            </li>
+            <li>
+              <span>Telephone</span>
+              <strong>[PHONE]</strong>
+            </li>
+            <li>
+              <span>WhatsApp Direct</span>
+              <strong>[WHATSAPP]</strong>
+            </li>
+            <li>
+              <span>Global Office</span>
+              <strong>[LOCATION]</strong>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-flex">
+          <div>
+            © 2026 [COMPANY NAME]. All Rights Reserved. Structural Reinforcement Detailing.
+          </div>
+          <div class="core-brand-message-tag">
+            PRECISION IN EVERY BAR.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Technical Lightbox Modal Dialog -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Technical Preview">
+    <div class="lightbox-dialog">
+      <div class="lightbox-header">
+        <div class="lightbox-header-title" id="lightbox-title">High-Resolution Technical Preview</div>
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img src="" id="lightbox-img" alt="Enlarged Reinforcement Detail">
+      </div>
+      <div class="lightbox-footer">
+        <div id="lightbox-meta">CAD/BIM Level of Development 400 • Fabrication Geometry</div>
+        <div style="color:var(--brand-blue); font-weight:700;">[COMPANY NAME] TECHNICAL REPOSITORIES</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/rebar3d.js"></script>
+  <script src="js/assembly3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
